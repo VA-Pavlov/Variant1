@@ -11,10 +11,14 @@
             <RowDefinition />
             <RowDefinition Height="4*"/>
         </Grid.RowDefinitions>
-        <DockPanel Background="LightBlue">
-            <Image  Source="/akvatoriay-PhotoRoom.png-PhotoRoom.png" Stretch="Fill" Width="150" HorizontalAlignment="Center"/>
-        </DockPanel>
-        <Frame x:Name="MainFrame" Grid.Row="1"/>
-
+        <Grid Background="LightBlue">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="2*"/>
+                <ColumnDefinition/>
+                <ColumnDefinition Width="2*"/>
+            </Grid.ColumnDefinitions>
+            <Image Grid.Column="1" Source="/akvatoriay-PhotoRoom.png-PhotoRoom.png" Stretch="Fill"  HorizontalAlignment="Center"/>
+        </Grid>
+        <Frame x:Name="MainFrame" Grid.Row="1" JournalOwnership="UsesParentJournal"/>
     </Grid>
 </Window>

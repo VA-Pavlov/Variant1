@@ -21,11 +21,11 @@
                     <TextBlock x:Name="NumberBoxBlock" Text="Бокс: " FontSize="20" HorizontalAlignment="Center" Margin="0,40"/>
                 </StackPanel>
             </Border>
-            <Button Content="Закончить смену" Margin="20" />
+            <Button Content="Закончить смену" Margin="20" IsEnabled="False" Name="FinishSmenaButton"/>
         </StackPanel>
         <ScrollViewer Grid.Column="2" >
             <StackPanel x:Name="ListZakaz"/>
         </ScrollViewer>
-        <Frame Grid.Column="1" x:Name="ManeWorkerFrame"/>
+        <Frame Grid.Column="1" x:Name="ManeWorkerFrame" JournalOwnership="UsesParentJournal"/>
     </Grid>
 </Page>

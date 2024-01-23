@@ -9,7 +9,7 @@
       Title="LogIn">
 
     <DockPanel>
-        <Button DockPanel.Dock="Left" Content="Окно пользователя" VerticalAlignment="Top" Background="LightGoldenrodYellow"/>
+        <Button DockPanel.Dock="Left" Content="Окно пользователя" VerticalAlignment="Top" Background="LightGoldenrodYellow" Click="Button_Click_1"/>
         <TextBlock DockPanel.Dock="Bottom" Name="ExeptionBlock"/>
         <Border Background="LightBlue" BorderBrush="AliceBlue" BorderThickness="10" CornerRadius="30" Margin="98,40,200,40">
             <Grid>
@@ -20,10 +20,10 @@
                 </Grid.ColumnDefinitions>
                 <StackPanel Grid.Column="1" Margin="0,50,0,0">
                     <TextBlock Text="Логин:" FontSize="15"/>
-                    <TextBox FontSize="18" Name="LoginBox"/>
+                    <TextBox FontSize="18" Name="LoginBox" Text="worker"/>
                     <TextBlock Text="Пароль" FontSize="15"/>
-                    <PasswordBox FontSize="18" Name="PasswordTextBox"/>
-                    <Button Content="Вход" Margin="70,15,70,0" Background="LightGoldenrodYellow" Click="Button_Click"/>
+                    <PasswordBox FontSize="18" Name="PasswordTextBox" Password="30Zero30"/>
+                    <Button x:Name="LogInButton" Content="Вход" Margin="70,15,70,0" Background="LightGoldenrodYellow" Click="Button_Click" IsEnabled="False"/>
                 </StackPanel>
             </Grid>
         </Border>

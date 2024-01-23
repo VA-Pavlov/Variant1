@@ -55,6 +55,12 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Pages\KlientPages\KlientPage.xaml.cs">
+      <DependentUpon>KlientPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\KlientPages\OrdersPanelPage.xaml.cs">
+      <DependentUpon>OrdersPanelPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\WorkerPage.xaml.cs">
       <DependentUpon>WorkerPage.xaml</DependentUpon>
     </Compile>
@@ -77,6 +83,14 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Pages\KlientPages\KlientPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\KlientPages\OrdersPanelPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Pages\LogIn.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

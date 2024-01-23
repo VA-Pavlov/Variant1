@@ -10,7 +10,7 @@ namespace Variant1
     {
         public int id;
         public string name;
-
+        public int box;
         public Worker(int id, string name)
         {
             this.id = id;

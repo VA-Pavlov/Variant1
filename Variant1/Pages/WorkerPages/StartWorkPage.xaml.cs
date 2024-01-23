@@ -21,17 +21,33 @@ namespace Variant1.Pages.WorkerPages
     public partial class StartWorkPage : Page
     {
         TextBlock NumberBoxBlock;
-        public StartWorkPage(TextBlock NumberBoxBlock)
+        Worker worker;
+        Frame MainFrame;
+        public StartWorkPage(TextBlock NumberBoxBlock, Worker worker, Frame mainFrame)
         {
             InitializeComponent();
             this.NumberBoxBlock = NumberBoxBlock;
+            this.worker = worker;
+            MainFrame = mainFrame;
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             if(NumberBoxBox.Text != null)
             {
-                NumberBoxBlock.Text += NumberBoxBox.Text.Trim();
+                try
+                {
+                    worker.box = Int32.Parse(NumberBoxBox.Text.Trim());
+                    NumberBoxBlock.Text += worker.box;
+                    WorkerPage.finishSmenaButton.IsEnabled = true;
+                    MainFrame.Content = new ZakazPage(worker);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                    NumberBoxBox.Background = new SolidColorBrush(Colors.LightPink);
+                }
+
             }
         }
     }

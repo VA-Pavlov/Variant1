@@ -20,9 +20,11 @@ namespace Variant1.Pages.WorkerPages
     /// </summary>
     public partial class ZakazPage : Page
     {
-        public ZakazPage()
+        Worker worker;
+        public ZakazPage(Worker worker)
         {
             InitializeComponent();
+            this.worker = worker;
         }
     }
 }

@@ -21,13 +21,15 @@ namespace Variant1.Pages
     /// </summary>
     public partial class WorkerPage : Page
     {
+        public static Button finishSmenaButton;
         Worker worker;
         public WorkerPage(Worker worker)
         {
             InitializeComponent();
             this.worker = worker;
             NameBox.Text = worker.name;
-            ManeWorkerFrame.Content = new StartWorkPage(NumberBoxBlock);
+            ManeWorkerFrame.Content = new StartWorkPage(NumberBoxBlock, worker, ManeWorkerFrame);
+            finishSmenaButton = FinishSmenaButton;
         }
     }
 }

@@ -22,11 +22,13 @@ namespace Variant1
     /// </summary>
     public partial class MainWindow : Window
     {
-        SqlConnection connection = null;
+        static public SqlConnection connect;
+        static public Frame mainFrame;
         public MainWindow()
         {
             InitializeComponent();
-            MainFrame.Content = new LogIn(connection, MainFrame);
+            mainFrame = MainFrame;
+            MainFrame.Content = new LogIn(MainFrame,this);
         }
     }
 }
